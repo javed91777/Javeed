@@ -1,0 +1,44 @@
+html,body,ul,li,div,p,h3{
+    padding: 0px;
+    margin: 0px;
+}
+div.header{
+    background-color: black;
+    /* height: 50px; */
+}
+ul li{
+    float: left;
+    list-style-type: none;
+    padding: 15px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+ul li:hover{
+    background-color: #CCCCCC;
+}
+ul li:hover a{
+    color: black;
+}
+div.banner{
+    padding: 0px;
+    margin: 0px;
+    background-image: url(images/banner.jpg);
+    height:532px;
+}
+div.banner div{
+    bottom: 50px;
+    /* position: absolute; */
+    left:40%;
+}
+div.banner div h3{
+    color: white;    
+    text-align: center;
+}
+div.banner div p{
+    color: white;
+}
+br.clearfix {
+    clear:both;
+}

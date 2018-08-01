@@ -1,0 +1,49 @@
+a{
+    text-decoration: none;
+    color: green
+}
+div.main{
+    width:900px;
+    border: 2px solid black;
+    margin: auto;
+    padding: 0px;
+}
+div.box{
+    width:300px;
+    margin: auto;
+    padding: 0px;
+}
+div.box1{
+    background-color: lightgreen;
+    float:left;
+    opacity: 1;
+    padding: 5px;
+}
+div.box2{
+    background-color: lightblue;
+    float: none;
+}
+div.box3{
+    background-color: sandybrown;
+    float: right;
+    clear: left;
+    overflow: auto;
+}
+img:hover{
+    opacity: 0.6;
+}
+div.background{
+    background: url(images/klematis.jpg) repeat;
+    border: 1px solid black;
+}
+div.Transbox{
+    background-color: #ffffff;
+    margin: 30px;
+    border: 1px solid black;
+    opacity: 0.6;
+}
+div.Transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+}
