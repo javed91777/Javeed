@@ -4,7 +4,6 @@ html,body,ul,li,div,p,h3{
 }
 div.header{
     background-color: black;
-    /* height: 50px; */
 }
 ul li{
     float: left;
@@ -28,8 +27,8 @@ div.banner{
     height:532px;
 }
 div.banner div{
-    bottom: 50px;
-    /* position: absolute; */
+    bottom: 60px;
+    position: absolute;
     left:40%;
 }
 div.banner div h3{
@@ -41,4 +40,31 @@ div.banner div p{
 }
 br.clearfix {
     clear:both;
+}
+div.band{
+    margin: auto;
+    width: 600px;
+}
+div.band div div{
+    width: 200px;
+    margin: auto
+}
+div.band div div h2{
+    color: black;    
+    text-align: center;
+}
+div.band div div p{
+    text-align: center;
+}
+div.band div p{
+    margin: auto;
+}
+div.band div div.member{
+    float: left;
+}
+div.band div div.member img{
+    width: 60%
+}
+div.band div div.member p{
+    left: 40%
 }
