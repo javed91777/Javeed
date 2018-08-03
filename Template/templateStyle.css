@@ -5,26 +5,27 @@ html,body,ul,li,div,p,h3{
 div.header{
     background-color: black;
 }
-ul li{
+div.header ul li{
     float: left;
     list-style-type: none;
     padding: 15px;
 }
-ul li a{
+div.header ul li a{
     text-decoration: none;
     color: white;
 }
-ul li:hover{
+div.header ul li:hover{
     background-color: #CCCCCC;
 }
-ul li:hover a{
+div.header ul li:hover a{
     color: black;
 }
 div.banner{
     padding: 0px;
     margin: 0px;
     background-image: url(images/banner.jpg);
-    height:532px;
+    height:600px;
+    margin-bottom: 5%;
 }
 div.banner div{
     bottom: 60px;
@@ -44,17 +45,19 @@ br.clearfix {
 div.band{
     margin: auto;
     width: 600px;
+    margin-bottom: 15%;
 }
 div.band div div{
     width: 200px;
-    margin: auto
+    margin: auto;
 }
 div.band div div h2{
     color: black;    
     text-align: center;
 }
-div.band div div p{
+div.band div div p.para{
     text-align: center;
+    color: grey;
 }
 div.band div p{
     margin: auto;
@@ -63,8 +66,65 @@ div.band div div.member{
     float: left;
 }
 div.band div div.member img{
-    width: 60%
+    width: 60%;
 }
 div.band div div.member p{
-    left: 40%
+    clear: both;
+    margin: auto;
+    width: 20px;
+    text-align: center;
+}
+div.TD{
+    background-color: black;
+    margin-bottom: 5%;
+}
+div.TD div{
+    margin: auto;
+    width: 600px;
+}
+div.TD div h2{
+    color: white;
+    text-align: center;
+}
+div.TD div p{
+    color: grey;
+    text-align: center;
+}
+div.TD div ul li{
+    margin: auto;
+    background-color: white;
+    list-style-type: none;
+    color: grey;
+    padding: 5px;
+    width: 300 px;    
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 2px;
+}
+div.TD div ul li span{
+    margin: left;
+    color: white;
+    padding-left: 20px;
+    background-color: red;
+    width: 10%;
+}
+div.TD div ul li span.right{
+    float: right;
+    color: white;
+    background-color: black;
+}
+div.TD div.BT
+{
+    margin: auto;
+    width:600px;
+    position: relative;
+}
+div.BT div{
+    float: left;
+    width: 150px;
+    margin-right: 10px;
+}
+div.BT div img{
+    width: 100%;
+    height: 100%;
 }
