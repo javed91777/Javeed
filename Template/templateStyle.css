@@ -1,4 +1,4 @@
-html,body,ul,li,div,p,h3{
+html,body,ul,li,div,p,h3,button,span{
     padding: 0px;
     margin: 0px;
 }
@@ -77,20 +77,24 @@ div.band div div.member p{
 div.TD{
     background-color: black;
     margin-bottom: 5%;
+    
+    position: relative;
 }
-div.TD div{
+div.TD div.TDChild{    
+    margin-top: 5%;
     margin: auto;
     width: 600px;
+    height: 1000px;
 }
-div.TD div h2{
+div.TD div.TDChild div h2{
     color: white;
     text-align: center;
 }
-div.TD div p{
+div.TD div.TDChild div p{
     color: grey;
     text-align: center;
 }
-div.TD div ul li{
+div.TD div.TDChild div ul li{
     margin: auto;
     background-color: white;
     list-style-type: none;
@@ -99,32 +103,39 @@ div.TD div ul li{
     width: 300 px;    
     padding-left: 20px;
     padding-right: 20px;
-    border-bottom: 2px;
+    border: 0.5px solid;
 }
-div.TD div ul li span{
-    margin: left;
+div.TD div.TDChild div ul li span{
+    left: 60%;
     color: white;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     background-color: red;
     width: 10%;
 }
-div.TD div ul li span.right{
+div.TD div.TDChild div ul li span.right{
     float: right;
     color: white;
     background-color: black;
 }
-div.TD div.BT
-{
+/* div.TD div.xyz{
+    clear: both;
+    width: 600px;
+    background-color: black;
     margin: auto;
-    width:600px;
-    position: relative;
-}
-div.BT div{
+} */
+div.TD div.TDChild div.xyz div.BookTickets{
+    margin: auto;
     float: left;
-    width: 150px;
-    margin-right: 10px;
+    clear: both;
 }
-div.BT div img{
-    width: 100%;
-    height: 100%;
+div.TD div.xyz div.BookTickets img{
+    width: 20%;
+}
+div.TD div.xyz div.BookTickets div p{
+    /* clear: both; */
+    width: 20%;
+}
+div.TD div.xyz div.BookTickets div button{
+    /* clear: both; */
+    width: 20%;
 }
