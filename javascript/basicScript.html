@@ -11,29 +11,33 @@
         
         var mainItem = ['biryani','noodles','jeerarice', 'pulka','kajurice'];
         var Curry = ['paneer','kajucurry','mixedvegcurry'];
-        var order_MainItem = "";
-        var order_Curry = "";
+        var order_MainItem;
+        var order_Curry;
 
         function bookOrder(main, curry){
             for(i=0; i<mainItem.length; i++){
-                if(main === mainItem[i]){
-                    console.log("Confirmed " +main+ " as Main Item");
+                if(main === mainItem[i]){                    
                     order_MainItem = main;
                 }
             }
 
             Curry.forEach(function(element) {
-                if(curry === element){
-                    console.log("Confirmed " +curry+ " as Curry");
+                if(curry === element){                    
                     order_Curry = curry;
                 }
             });
 
-            if(order_MainItem === ""){
+            if(order_MainItem){
+                console.log("Confirmed " +main+ " as Main Item");
+            }
+            else{
                 console.log(main+ " is not available in the menu");
             }
 
-            if(order_Curry === ""){
+            if(order_Curry){
+                console.log("Confirmed " +curry+ " as Curry");
+            }
+            else{
                 console.log(curry + " is not available in the menu");
             }
         }
