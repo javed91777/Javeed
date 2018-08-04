@@ -18,14 +18,16 @@
             for(i=0; i<mainItem.length; i++){
                 if(main === mainItem[i]){                    
                     order_MainItem = main;
+                    break;
                 }
             }
-
-            Curry.forEach(function(element) {
-                if(curry === element){                    
+            
+            for(var x in Curry){
+                if(x===curry){
                     order_Curry = curry;
+                    break;
                 }
-            });
+            }
 
             if(order_MainItem){
                 console.log("Confirmed " +main+ " as Main Item");
@@ -42,7 +44,7 @@
             }
         }
 
-        bookOrder('biryani', 'paneer');        
+        bookOrder('jeerarice', 'mixedvegcurry');        
         </script>
     </body>
 </html>

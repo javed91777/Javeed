@@ -76,18 +76,18 @@ div.band div div.member p{
 }
 div.TD{
     background-color: black;
-    margin-bottom: 5%;
-    
+    margin-bottom: 5%;    
     position: relative;
 }
-div.TD div.TDChild{    
-    margin-top: 5%;
+div.TD div.TDChild{
     margin: auto;
+    padding: 10px;
     width: 600px;
-    height: 1000px;
+    height: 650px;
 }
 div.TD div.TDChild div h2{
     color: white;
+    padding: 10px;
     text-align: center;
 }
 div.TD div.TDChild div p{
@@ -117,25 +117,65 @@ div.TD div.TDChild div ul li span.right{
     color: white;
     background-color: black;
 }
-/* div.TD div.xyz{
-    clear: both;
+div.TD div.xyz{
     width: 600px;
-    background-color: black;
-    margin: auto;
-} */
-div.TD div.TDChild div.xyz div.BookTickets{
-    margin: auto;
+    height: 600px;
+}
+div.xyz div{
+    width: 190px;
     float: left;
-    clear: both;
+    margin: 5px;
+    background-color: white;
 }
 div.TD div.xyz div.BookTickets img{
-    width: 20%;
+    width: 190px;
 }
-div.TD div.xyz div.BookTickets div p{
-    /* clear: both; */
-    width: 20%;
+div.TD div.xyz div.BookTickets div{
+    margin: 10px;
+    width: 175px;
+}
+div.TD div.xyz h5{
+    margin: 10px;
+    text-align: left;
+    width: 175px;
+}
+div.TD div.xyz div.BookTickets p{
+    margin: 10px;
+    text-align: left;
+    width: 175px;
 }
 div.TD div.xyz div.BookTickets div button{
-    /* clear: both; */
-    width: 20%;
+    margin: 10px;
+    width: 100px;
+    display: block;
+    background-color: black;
+    color: white;
 }
+div.contact h2{
+    text-align: center;
+}
+div.contact p{
+    text-align: center;
+}
+div.contact div{
+    width: 600px;
+    margin: auto;
+}
+div.contact div div{
+    width: 200px;
+    padding: 10px;
+    float: left;
+}
+div.contact div form div div{
+    float: left;
+    width:
+}
+div.contact input{
+    width: 100px;
+}
+div.contact div i{
+    padding: 5px;
+}
+/* div.contact div div{
+    float: left;
+} */
