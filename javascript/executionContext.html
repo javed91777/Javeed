@@ -1,0 +1,22 @@
+<!DocType html>
+<html>
+    <head>
+        <title>
+            Execution Context
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            console.log(a);
+            var a = 10;
+            console.log(a);
+            c();
+            function c()
+            {
+                var a = 30;
+                console.log(a);
+            }
+            console.log(a);
+        </script>
+    </body>
+</html>
