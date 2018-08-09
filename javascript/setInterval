@@ -1,0 +1,4 @@
+setInterval(function(){
+console.log("Print after min 3 seconds")
+}, 3000);
+

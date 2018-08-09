@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Map reduce filter</title>
+</head>
+<body>
+    <script type="text/javascript">
+    var array1 = [];
+    var array2 = [];
+
+    var data = [{
+        name: 'Javeed',
+        age: 10
+    },{
+        name: 'Jeevan',
+        age: 20
+    },{
+        name: 'Gowtham',
+        age: 30
+    }]
+
+    array1 = data.map(function(item){
+        if(item.age>=20){
+            return item.age;
+        }
+    });
+
+    console.log(array1);
+
+    array2 = data.filter(function(item){
+        if(item.age>=20){
+            return 10;
+        }
+    });
+    console.log(array2);
+    
+
+    </script>
+</body>
+</html>

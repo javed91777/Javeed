@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title></title>
+        <style type="text/css">
+            html,body,ul,li,ol{
+                padding:0px;
+                margin:0px;
+            }
+            div.container{
+                width:500px;
+                margin:auto;
+            }
+            ul li{
+                list-style-type: none;
+                float:left;
+                width:200px;
+                border:1px solid black;
+                text-align:center;
+            }
+            ul::after,ul::before{
+                content:'';
+                display: block;
+                clear:both;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">                
+            <div>
+                <h3>customer name</h3>
+                <ul>
+                    <li>product Name</li>
+                    <li>item cost</li>
+                </ul>
+                <ul>
+                    <li>product Name</li>
+                    <li>item cost</li>
+                </ul>
+                <ul>
+                    <li>total cost</li>
+                    <li>sum of item cost</li>
+                </ul>
+            </div>
+            <div>
+                <h3>customer name</h3>
+                <ul>
+                    <li>product Name</li>
+                    <li>item cost</li>
+                </ul>
+                <ul>
+                    <li>product Name</li>
+                    <li>item cost</li>
+                </ul>
+                <ul>
+                    <li>total cost</li>
+                    <li>sum of item cost</li>
+                </ul>
+            </div>
+        </div>
+        <script src="data.js"></script>
+        <script type="text/javascript">
+        var obj = data;
+        var listOfItemCosts = [];
+        var customer;
+
+        
+
+        function print(){       
+            var orders = obj.map(function(objects){
+                return objects.orders;                
+            })
+            var itemCostArray = orders.map(function(items){
+                var cost = 0;
+                items.map(function(itemx){
+                    cost= cost+itemx.itemCost;
+                    
+                    console.log("Product Name: " +itemx.productName+", Product Cost: "+itemx.itemCost);
+                })
+                listOfItemCosts.push("Total cost: "+cost);
+
+                
+                console.log(cost);
+            })        
+            //console.log(listOfItemCosts);
+
+        }
+
+        function print2(){       
+            obj.map(function(objects){                
+                objects.orders.map(function(items){
+                    var cost = 0;
+                    items.map(function(itemx){
+                        cost= cost+itemx.itemCost;                
+                    })
+                    listOfItemCosts.push(cost);
+                })
+            })                    
+            console.log(listOfItemCosts);
+        }
+
+        print();
+        </script>
+    </body>
+</html>

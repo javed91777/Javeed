@@ -1,0 +1,49 @@
+<!DocType html>
+<html>
+    <head>
+        <title>
+            Sample Test
+        </title>
+        <style type="text/css">
+            #incompleteTask .editMode input[type=text]{
+                display: none;
+            }
+            #incompleteTask input[type=text]{
+                display: inline;
+            }
+            #EditComplete{
+                display: none;
+            }
+            /* .editMode label{
+                display: none;
+            } */
+        </style>
+    </head>
+    <body>
+        <h3>
+            Add Task
+        </h3>
+        <div>
+            <input type="text" id="taskName">
+            <button id="addBtn" onclick="addTask()">Add Task</button>
+        </div>
+        <div>
+            <h3>Incomplete Task</h3>
+            <ul id="incompleteTask">
+                <li class="editMode" id="editMode">
+                    <input type="checkbox" id="staticIncompleteCheckbox" onclick="moveToComplete()">                
+                    <input type="text" id="staticIncompleteTaskTextBox">                
+                    <label id="staticIncompleteTaskLabel">task</label>                
+                    <button id="EditTask" onclick="editStaticTask()">Edit</button>
+                    <button id="EditComplete" onclick="EditComplete()">Finish Edit</button>                
+                    <button id="DeleteTask">Delete</button>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h3>Complete Task</h3>
+            <ul id="completedTasks"></ul>
+        </div>
+        <script type="text/javascript" src="todo.js"></script>
+    </body>
+</html>
