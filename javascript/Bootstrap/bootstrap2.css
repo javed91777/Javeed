@@ -1,0 +1,145 @@
+div#band-card{
+    width: 800 px;
+    margin: auto;
+    border-style: none;
+}
+div.band{
+    width: 900px;
+    margin: auto;
+    height: 600px;
+}
+h5#band-card-title{
+    text-align: center;
+}
+p#card-text-opacity{
+    text-align: center;
+    opacity: 0.5px;
+    color: silver;
+}
+div#cards{
+    float: left;
+    border-style: none;
+    width: 250px;    
+}
+h5#cards-card-title{
+    text-align: center;
+}
+div#cards img{
+    height: 150px;
+    width: 60%;
+    margin: auto;
+}
+div#tour-card{
+    width: 800 px;
+    margin: auto;
+    border-style: none;
+    background-color: black;
+}
+h2#tour-card-title{
+    text-align: center;
+    color: whitesmoke;
+}
+div.Tour{
+    background-color: black;
+    height: 750px;
+    margin: auto;
+}
+div.Tickets{
+    text-align: center;
+    width: 800px;
+    background-color: white;
+    margin: auto;
+    border: 2px;
+}
+div.Tickets p{
+    color: grey;
+    border-color: silver;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-style: solid;
+    border-width: 0.2px;
+    margin: 0px;
+    clear: left;    
+}
+.badge-secondary{
+    margin: 10px;
+    background-color: red;
+}
+span.badge-dark{
+    /* margin: 10px; */
+    text-align: justify;
+    float:right;
+}
+div.Tour-BuyTickets{
+    width: 850px;
+    margin: auto;
+    padding-left: 20px;
+    margin-top: 32px;
+}
+div.Tour-BuyTickets-card{
+    float: left;
+    width: 260px;
+    background-color: white;
+    margin: 5px;
+}
+p.date{
+    color: silver;
+}
+div.Contact{
+    height: 275px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+div.Contact h4{
+    text-align: center;
+}
+div.Contact p{
+    text-align: center;
+    color: silver;
+}
+div.Contact-Details{
+    width: 800px;
+    margin: auto;
+    height: 200px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+div.Contact-info{
+    width: 50%;
+    float: left;
+    border: 0px;
+}
+i{
+    width: 30px;
+}
+div.Contact-form{
+    width: 50%;
+    float: right;
+}
+div.row{
+    padding-bottom: 10px;
+}
+button.btn-primary{
+    color: white;
+    background-color: black;
+    float: right;
+    border-color: black;
+}
+footer.Powered-By{
+    background-color: silver;
+    text-align: center;
+    padding: 64px;
+}
+footer.Powered-By i{
+    width: 30px;
+    height: 30px;
+}
+.navbar-expand-lg{
+    background-color: black;
+}
+
+
+
+
+

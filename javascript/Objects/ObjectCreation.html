@@ -1,0 +1,42 @@
+<!DocType html>
+<html>
+    <head>
+        <title>
+            Object Creation
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        
+        var tv1 = {
+            brandName: 'LG',
+            color: 'Green'
+        }
+        console.log(tv1);
+
+        var tv2 = {
+            brandName: 'Samsung',
+            color: 'Blue'
+        }
+        console.log(tv2);
+
+        var tv3 = Object.create(tv1);
+        console.log(tv1);
+        console.log(tv2);
+        console.log(tv3);
+
+        function customerOrders(chairs, tables, shoerack){
+            console.log(this);
+            this.tables = tables;
+            this.chairs = chairs;
+            this.shoerack = shoerack;
+        }
+
+        var customer1 = new customerOrders('neelkamal chairs','wooden table', 'metal wallmount shoerack');
+		var customer2 = new customerOrders('boss chairs','metal table', 'wooden shoerack');
+
+        console.log(customer1);
+        console.log(customer2);
+        </script>
+    </body>
+</html>

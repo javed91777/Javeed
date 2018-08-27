@@ -25,7 +25,8 @@
         </style>
     </head>
     <body>
-        <div class="container">                
+        <div class="container" id="container"> 
+            <button id="displayAll" onclick="printTable()">Display All Customers Data</button>               
             <div>
                 <h3>customer name</h3>
                 <ul>
@@ -54,7 +55,7 @@
                 <ul>
                     <li>total cost</li>
                     <li>sum of item cost</li>
-                </ul>
+                </ul>                
             </div>
         </div>
         <script src="data.js"></script>
@@ -77,8 +78,6 @@
                     console.log("Product Name: " +itemx.productName+", Product Cost: "+itemx.itemCost);
                 })
                 listOfItemCosts.push("Total cost: "+cost);
-
-                
                 console.log(cost);
             })        
             //console.log(listOfItemCosts);
@@ -98,7 +97,36 @@
             console.log(listOfItemCosts);
         }
 
-        print();
+        function print3(){       
+            var orders = obj.map(function(objects){
+                return objects.orders;                
+            })
+            var itemCostArray = orders.map(function(items){
+                var cost = items.reduce(function(cost1, itemx){                                        
+                    console.log("Product Name: " +itemx.productName+", Product Cost: "+itemx.itemCost);
+                    return cost1+itemx.itemCost;
+                },0)
+                listOfItemCosts.push("Total cost: "+cost);
+                console.log(cost);
+            })        
+            console.log(listOfItemCosts);
+
+        }
+
+        function print4(){              
+                var itemCostArray = obj.orders.map(function(items){
+                    var cost = items.reduce(function(cost1, itemx){                                        
+                        console.log("Product Name: " +itemx.productName+", Product Cost: "+itemx.itemCost);
+                        return cost1+itemx.itemCost;
+                    },0)
+                    listOfItemCosts.push("Total cost: "+cost);
+                    console.log(cost);
+                })        
+                console.log(listOfItemCosts);
+        }        
         </script>
+        <script type="text/javascript" src="reduce.js">
+        </script>
+        
     </body>
 </html>

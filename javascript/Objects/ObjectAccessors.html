@@ -1,0 +1,42 @@
+<!DocType html>
+<html>
+    <head>
+        <title>
+            Object Accessors
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var obj = {
+                i: 0,
+                get increment(){
+                    this.i++;
+                    return this.i;
+                },
+                get decrement(){
+                    this.i--;
+                    return this.i;
+                },
+                get reset(){
+                    this.i=0;
+                },
+                set add(value){
+                    this.i+=value;
+                    return this.i;
+                },
+                set subtract(value){
+                    this.i-=value;
+                    return this.i;
+                }
+            }
+
+            console.log(obj.i);
+            console.log(obj.increment);
+            console.log(obj.decrement);
+            obj.reset;
+            console.log(obj.i);
+            console.log(obj.add=5);
+            console.log(obj.subtract=5);
+        </script>
+    </body>
+</html>

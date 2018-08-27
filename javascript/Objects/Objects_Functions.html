@@ -1,0 +1,114 @@
+<!DocType html>
+<html>
+    <head>
+        <title>
+            Objects and Functions
+        </title>
+    </head>
+    <body>
+        <script>
+            var x1 = {name: 'javeed', age: 21, gender: 'male'};
+            console.log(x1);
+
+            var x2 = {
+                name: 'Jeevan',
+                age: 22,
+                gender: 'male'
+            };
+            console.log(x2);
+
+            var x3 = new Object();
+            console.log(x3);
+            x3 = {name: 'Gowtham', age: 23, gender: 'male'};
+            console.log(x3);
+
+            var x4 = new Object();
+            x4.name = "Santhosh";
+            x4.age = 24;
+            x4.gender = 'male';
+            console.log(x4);
+
+            var x5 = x4;
+            x5.address = 'suncity';
+            console.log(x5);
+            console.log(x4);
+
+            console.log("name of x1 is "+x1.name);
+            console.log("name of x2 is "+x2['name']);
+
+            var age = "age";
+            console.log("age of x1 is "+x1[age]);
+
+            for(var x in x1){
+                console.log(x+ " of x1 is " +x1[x]);
+            }
+
+            var del = delete x5.address;
+            console.log(del);
+            console.log(x5.address);
+            console.log(x4.address);
+            console.log(x5);
+            console.log(x4);
+
+            var person1 = {
+                name: 'Javeed',
+                age: 21,
+                gender: 'male',
+                print: function(){
+                    console.log(this);
+                    console.log("Age of "+person1.name+ " is "+person1.age+ " and gender is "+person1.gender);
+                }
+            }
+
+            var person2 = {
+                name: 'Jeevan',
+                age: 22,
+                gender: 'male',
+                print: function(){
+                    return "Age of "+person2.name+ " is "+person2.age+ " and gender is "+person2.gender;
+                }
+            }
+
+            var person3 = {
+                name: 'Jeevan',
+                age: 22,
+                gender: 'male',
+                print: function(){
+                    return "Age of "+this.name+ " is "+this.age+ " and gender is "+this.gender;
+                }
+            }
+
+            person1.print();
+            var print = person2.print();
+            console.log(print);
+
+            var print2 = person3.print();
+            console.log(print2);
+
+            console.log(x1.name.toUpperCase());
+
+            x1.getName= function(){
+                return x1.name;
+            }
+
+            console.log(x1);
+            console.log(x1.getName());
+
+
+            var newPerson = {
+                name: 'Reddy',
+                age: 26,
+                get names(){
+                    return this.name;
+                },
+                set ages(newAge){
+                    this.age = newAge;
+                }
+            }
+
+            console.log(newPerson.names);
+            newPerson.ages = 27;
+            console.log(newPerson);
+        </script>
+    </body>
+</html>

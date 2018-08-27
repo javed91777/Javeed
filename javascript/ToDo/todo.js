@@ -8,6 +8,13 @@ var staticIncompleteTaskEditCompleteButton = document.getElementById('EditComple
 var staticIncompleteTaskCheckBox = document.getElementById('staticIncompleteCheckbox');
 var staticIncompleteTaskList = document.getElementById('editMode');
 var completedTasksUl = document.getElementById('completedTasks');
+
+// var checkBox = document.getElementById('dynamicCheckbox');
+// var textBox;
+// var label;
+// var editButton;
+// var deleteButton;
+// var taskItem = document.getElementById('taskItem');
 function addTask() {
     var taskItem = document.createElement('li');
     var checkBox = document.createElement('input');
@@ -18,11 +25,17 @@ function addTask() {
 
     label.innerText = taskName.value;
     checkBox.setAttribute('type', 'checkbox');
+    checkBox.setAttribute('id', 'dynamicCheckbox');
     textBox.setAttribute('type', 'text');
     editButton.innerText = "Edit";
     deleteButton.innerText = "Delete";
     textBox.style.display = "none";
-
+    taskItem.setAttribute('id', 'taskItem');
+    checkBox.onchange = function(){
+        completedTasksUl.appendChild(taskItem);
+        textBox.style.display = "none";
+        checkBox.style.display = "none";
+    }
     var array = [checkBox, textBox, label, editButton, deleteButton];
     array.map(function(element){
         taskItem.appendChild(element);
@@ -50,5 +63,12 @@ function moveToComplete(){
     completedTasksUl.appendChild(staticIncompleteTaskList);
     staticIncompleteTaskTextBox.style.display = "none";
     staticIncompleteTaskCheckBox.style.display = "none";
-
 }
+
+// function moveToComplete2(){
+//     completedTasksUl.appendChild(taskItem);
+//     textBox.style.display = "none";
+//     checkBox.style.display = "none";
+// }
+
+// checkBox.onchange = moveToComplete2();

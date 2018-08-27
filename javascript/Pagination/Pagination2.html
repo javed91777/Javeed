@@ -1,0 +1,130 @@
+<!DocType html>
+<html>
+    <head>
+        <title>
+            Pagination
+        </title>
+        <script type="text/javascript" src="data.js"></script>
+        <style type="text/css">
+        .page{
+            text-align: center;
+            padding: 10px;
+        }
+        .footer{
+            margin: auto;
+            width: 200px;
+        }
+        #container{
+            margin: auto;
+            width: 200px;
+        }
+        li{
+            list-style-type: none;
+            float: left;
+            padding: 10px;
+        }
+        ul{            
+            padding: 10px;
+        }
+        </style>
+    </head>
+    <body>
+        <script>
+        var dataFromJS = data;
+        var i=0;
+        var numberOfPages = Math.ceil(data.length/10);
+        var custPerPage = 10;
+
+        var displayElements = function(startIndex, endIndex){
+            var existingContainerDiv = document.getElementById('container');
+            if(existingContainerDiv){
+                existingContainerDiv.parentNode.removeChild(existingContainerDiv);
+                var containerDiv = document.createElement('div');
+                containerDiv.setAttribute('id', 'container');
+                document.body.appendChild(containerDiv);
+            }
+            else{
+                var containerDiv = document.createElement('div');
+                containerDiv.setAttribute('id', 'container');
+                document.body.appendChild(containerDiv);
+            }
+            
+            for(var x =startIndex; x<endIndex; x++){
+                console.log(data[x].firstName);
+                var customer_div = document.createElement('div');
+                var customerName_h3 = document.createElement('h3');
+                customerName_h3.innerText = data[x].firstName;
+                customer_div.appendChild(customerName_h3);
+                containerDiv.appendChild(customer_div);
+
+                var custOrders = data[x].orders;
+
+                var totalCost = 0;
+
+                for(var y=0; y<custOrders.length; y++){
+                    console.log(custOrders[y].productName);
+                    console.log(custOrders[y].itemCost);
+
+                    var productUl = document.createElement('ul');
+                    var productNameLi = document.createElement('li');
+                    var itemCostLi = document.createElement('li');
+
+                    productUl.appendChild(productNameLi);
+                    productUl.appendChild(itemCostLi);
+                    customer_div.appendChild(productUl);
+
+                    productNameLi.innerText = custOrders[y].productName;
+                    itemCostLi.innerText = custOrders[y].itemCost;
+
+                    totalCost = totalCost + custOrders[y].itemCost;
+                }
+
+                var totalCostUl = document.createElement('ul');
+                var totalCostTextLi = document.createElement('li')
+                var totalCostValueLi = document.createElement('li');
+
+                totalCostTextLi.innerText = "Total Cost";
+                totalCostValueLi.innerText = totalCost;
+
+                totalCostUl.appendChild(totalCostTextLi);
+                totalCostUl.appendChild(totalCostValueLi);
+                customer_div.appendChild(totalCostUl);
+            }          
+        }
+
+        var footer = document.createElement('div');
+        footer.setAttribute('class', 'footer');
+        document.body.appendChild(footer);
+        for(i=0; i<numberOfPages; i++){
+            var span = document.createElement('span');
+            span.setAttribute('id', 'page'+(i+1));
+            span.setAttribute('class', 'page');
+            span.innerText = i+1;
+            footer.appendChild(span);
+        }
+
+        var page1 = document.getElementById('page1');
+        var page2 = document.getElementById('page2');
+        var page3 = document.getElementById('page3');
+
+        page1.onclick = function(){
+            i=0;
+            custPerPage = 10;
+            displayElements(i, custPerPage);
+        }
+
+        page2.onclick = function(){
+            i=10;
+            custPerPage = 20;
+            displayElements(i, custPerPage);
+        }
+
+        page3.onclick = function(){
+            i=20;
+            custPerPage = 30;
+            displayElements(i, custPerPage);
+        }
+
+    </script>
+    </body>
+</html>

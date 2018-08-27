@@ -1,0 +1,86 @@
+<!DocType html>
+<html>
+    <head>
+        <title>
+            Customer Manager Portal
+        </title>
+        <style type="text/css">
+            html,body,li,container,ul,div{
+                margin: 0px;
+                padding: 0px;
+            }
+            ul li{
+                list-style-type: none;
+                float: left;
+                width: 200px;
+                border: 1px solid black;
+                text-align: center;
+            }
+            ul::after, ul::before{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            div.container{
+                margin: auto;
+                width: 600px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <ul>
+                    <li>Product Name</li>
+                    <li>item Cost</li>
+                </ul>
+            </div>
+            <div>
+                <h3>customer name</h3>
+                <ul>
+                    <li>product Name</li>
+                    <li>item cost</li>
+                </ul>
+                <ul>
+                    <li>product Name</li>
+                    <li>item cost</li>
+                </ul>
+                <ul>
+                    <li>total cost</li>
+                    <li>sum of item cost</li>
+                </ul>
+            </div>
+            <div>
+                <h3>customer name</h3>
+                <ul>
+                    <li>product Name</li>
+                    <li>item cost</li>
+                </ul>
+                <ul>
+                    <li>product Name</li>
+                    <li>item cost</li>
+                </ul>
+                <ul>
+                    <li>total cost</li>
+                    <li>sum of item cost</li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+        var container = document.getElementsByClassName('container')[0];
+        var firstChild = container.querySelector('div:first-child');
+            function cb(event){
+                console.log(event);
+                console.log("You clicked on container");
+            }
+            function cb1(event){
+                console.log(event);
+                console.log("You clicked on first child element");
+            }
+
+            container.addEventListener('click', cb, true);
+            firstChild.addEventListener('click', cb1, true);
+
+        </script>
+    </body>
+</html>

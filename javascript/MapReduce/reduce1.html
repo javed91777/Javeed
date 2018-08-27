@@ -1,0 +1,98 @@
+<!DocType html>
+<html>
+    <head>
+        <title>
+            Reduce
+        </title>
+        <script tyep="text/javascript", src="data.js"></script>
+    </head>
+    <body>
+        <h3 id="Demo"></h3>
+        <script type="text/javascript">
+            var numbers = [1,2,3,4,5];
+            // function getSum(sum, arrayElementValue){
+            //     return sum+arrayElementValue;
+            // }
+            // function myFunction(){
+            //     document.getElementById('Demo').innerText = numbers.reduce(getSum);
+            // }
+            // myFunction();
+
+            // var sum = numbers.reduce(function(total, num){
+            //     return total+num;
+            // })
+            // function showSum(){
+            //     document.getElementById('Demo').innerText = sum;
+            // }
+            // showSum();
+
+            // var sum = numbers.reduce(function(total, num, numIndex, numbers){
+            //     console.log(total);
+            //     console.log(num);
+            //     console.log(numIndex);
+            //     console.log(numbers);
+            //     return total+num;
+            // },0)
+            // function showSum(){
+            //     document.getElementById('Demo').innerText = sum;
+            // }
+            // showSum();
+
+            // var obj = [{
+            //         x: 1
+            //     },{
+            //         x: 2
+            //     },{
+            //         x:3
+            //     },{
+            //         x: 4
+            //     },{
+            //         x:5
+            //     }
+            // ]
+            // var sum = obj.reduce(function(total, num){
+            //     return total+num.x;
+            // },0)
+            // console.log(sum);
+
+            // var obj = [{
+            //         x: 1,
+            //         y: 1
+            //     },{
+            //         x: 2,
+            //         y: 2
+            //     },{
+            //         x: 3,
+            //         y: 3
+            //     },{
+            //         x: 4,
+            //         y: 4
+            //     },{
+            //         x: 5,
+            //         y: 6
+            //     }
+            // ]
+            // var sum = obj.reduce(function(total, num){
+            //     return total+(num.x+num.y);
+            // },0)
+            // console.log(sum);
+
+            var obj = data;
+
+            var arrayOfOrders = obj.map(function(object){
+                //console.log(object.orders);
+                return object.orders;
+            })
+            //console.log(arrayOfOrders);
+
+            var totalCost = arrayOfOrders.map(function(orders){
+                var eachCustomerTotalCost = orders.reduce(function(acc, costObject, costObjectIndex, array){
+                    return acc+costObject.itemCost;
+                },0)
+                console.log(eachCustomerTotalCost);
+                return eachCustomerTotalCost;
+            })
+            console.log(totalCost);
+        </script>
+    </body>
+</html>

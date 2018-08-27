@@ -1,0 +1,34 @@
+<!DocType html>
+<html>
+    <head>
+        <title>
+            Object call
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function Chairs(woodenchairqty,plastichairqty,foldablechairqty){
+                this.woodenchair = woodenchairqty;
+                this.plastichair = plastichairqty;
+                this.foldablechair = foldablechairqty;  
+            }
+            Chairs.prototype.getChairQuantity = function(){
+                console.log(`wooden chair quantity is ${this.woodenchair}`);
+            }
+
+            function CustomerOrders(chairs,tables,shoerack){
+                console.log(this);
+                //Chairs.call(this, 4,3,2);
+                this.table = tables;
+                this.chair = chairs;
+                this.shoerack = shoerack;
+                getGeneralOrderInfo = function(){
+                    console.log(`chairs im Customer Oders is ${this.chairs}`);
+                }
+            }
+
+            var customer1 = new CustomerOrders(1,2,3);
+            Chairs.call(customer1, 5,6,7);
+        </script>
+    </body>
+</html>
